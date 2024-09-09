@@ -37,12 +37,6 @@ dependencies:
   cupertino_icons: ^1.0.6
   bloc:
   flutter_bloc:
-  uuid:
-  equatable:
-  rxdart:
-  shared_preferences:
-  intl:
-  figma_squircle:
 
 dev_dependencies:
   flutter_test:
