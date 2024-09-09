@@ -5,13 +5,16 @@ sealed class HomeState {}
 
 abstract class HomeActionState extends HomeState {}
 
-final class HomeInitial extends HomeState {}
+final class HomeInitialState extends HomeState {}
 
 class HomeLoadingState extends HomeState {}
 
-class HomeLoadedSuccessState extends HomeState {}
+class LoadedSuccessState extends HomeState {
+  final List<ProductModel> products;
+  LoadedSuccessState({required this.products});
+}
 
-class HomeErrorState extends HomeState {}
+class ErrorState extends HomeState {}
 
 class NavigateToWishlistState extends HomeActionState {}
 
