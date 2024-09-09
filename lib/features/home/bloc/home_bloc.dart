@@ -6,8 +6,21 @@ part 'home_state.dart';
 
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
   HomeBloc() : super(HomeInitial()) {
-    on<HomeEvent>((event, emit) {
-      // TODO: implement event handler
-    });
+    on<WishlistButtonClickedEvent>(
+      (event, emit) {},
+    );
+    on<CartButtonClickedEvent>(
+      (event, emit) {},
+    );
+    on<NavigateToWishlistEvent>(
+      (event, emit) {
+        print('Wishlist clicked');
+      },
+    );
+    on<NavigateToCartEvent>(
+      (event, emit) {
+        print('Cart clicked');
+      },
+    );
   }
 }
