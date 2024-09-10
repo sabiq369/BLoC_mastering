@@ -54,6 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
           case LoadedSuccessState:
             final successState = state as LoadedSuccessState;
             return Scaffold(
+              backgroundColor: Colors.white,
               appBar: AppBar(
                 title: Text('Grocery'),
                 centerTitle: true,
@@ -78,7 +79,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     itemCount: successState.products.length,
                     itemBuilder: (context, index) {
                       return ProductTileWidget(
-                          productModel: successState.products[index]);
+                        productModel: successState.products[index],
+                        homeBloc: homeBloc,
+                      );
                     },
                   ),
                 ),

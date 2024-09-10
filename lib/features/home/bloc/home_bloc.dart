@@ -1,5 +1,7 @@
 import 'package:bloc/bloc.dart';
+import 'package:bloc_mastering/data/cart_items.dart';
 import 'package:bloc_mastering/data/grocery_data.dart';
+import 'package:bloc_mastering/data/wishlist_items.dart';
 import 'package:bloc_mastering/features/home/models/home_product_data_model.dart';
 import 'package:meta/meta.dart';
 
@@ -26,18 +28,25 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       },
     );
     on<WishlistButtonClickedEvent>(
-      (event, emit) {},
+      (event, emit) {
+        wishListItems.add(event.clickedProduct);
+      },
     );
     on<CartButtonClickedEvent>(
-      (event, emit) {},
+      (event, emit) {
+        cartItems.add(event.clickedProduct);
+      },
     );
     on<NavigateToWishlistEvent>(
       (event, emit) {
+        emit(NavigateToWishlistState());
         print('Wishlist clicked');
       },
     );
     on<NavigateToCartEvent>(
       (event, emit) {
+        emit(NavigateToCartState());
+
         print('Cart clicked');
       },
     );
