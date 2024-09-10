@@ -5,4 +5,8 @@ sealed class CartEvent {}
 
 class CartInitialEvent extends CartEvent {}
 
-class CartRemoveFromCart extends CartEvent {}
+class CartRemoveFromCart extends CartEvent {
+  final ProductModel productModel;
+
+  CartRemoveFromCart({required this.productModel});
+}

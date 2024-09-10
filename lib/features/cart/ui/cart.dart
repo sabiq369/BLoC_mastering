@@ -1,6 +1,5 @@
 import 'package:bloc_mastering/features/cart/bloc/cart_bloc.dart';
 import 'package:bloc_mastering/features/cart/ui/cart_tile_widget.dart';
-import 'package:bloc_mastering/features/home/ui/product_tile_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
