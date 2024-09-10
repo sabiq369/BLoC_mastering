@@ -45,7 +45,6 @@ class _HomeScreenState extends State<HomeScreen> {
         switch (state.runtimeType) {
           case HomeLoadingState:
             return Scaffold(
-              backgroundColor: Colors.red,
               body: Center(
                 child: CircularProgressIndicator(
                   color: Colors.blue,
@@ -55,7 +54,6 @@ class _HomeScreenState extends State<HomeScreen> {
           case LoadedSuccessState:
             final successState = state as LoadedSuccessState;
             return Scaffold(
-              backgroundColor: Colors.blue,
               appBar: AppBar(
                 title: Text('Grocery'),
                 centerTitle: true,
@@ -75,7 +73,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
               body: Scaffold(
-                backgroundColor: Colors.green,
                 body: SafeArea(
                   child: ListView.builder(
                     itemCount: successState.products.length,
@@ -89,15 +86,12 @@ class _HomeScreenState extends State<HomeScreen> {
             );
           case ErrorState:
             return Scaffold(
-              backgroundColor: Colors.yellow,
               body: Center(
                 child: Text('Error'),
               ),
             );
           default:
-            return Container(
-              color: Colors.grey,
-            );
+            return SizedBox();
         }
       },
     );

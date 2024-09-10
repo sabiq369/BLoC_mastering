@@ -23,6 +23,14 @@ class GroceryData {
       'description': 'Fresh and juicy bananas.',
       'image':
           'https://images.immediate.co.uk/production/volatile/sites/30/2017/01/Bunch-of-bananas-67e91d5.jpg?quality=90&resize=440,400',
+    },
+    {
+      'id': 4,
+      'name': 'Blueberry',
+      'price': 10.5,
+      'description': 'Fresh and juicy berry.',
+      'image':
+          'https://blueberry.org/wp-content/uploads/2021/04/Fresh-Highbush-Blueberries-in-Heart-Dish-edited.jpg',
     }
   ];
 }
